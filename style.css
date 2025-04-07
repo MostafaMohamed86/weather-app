@@ -7,8 +7,8 @@
 body{
     background: #222;
 }
-.card {
-    position: relative; /* إضافة هذه الخاصية */
+.card{
+    position: relative;
     width: 90%;
     max-width: 470px;
     background: linear-gradient(135deg, #00feba, #5b548a);
@@ -19,8 +19,7 @@ body{
     border-radius: 20px;
     height: auto;
 }
-
-.search button {
+.search button{
     outline: none;
     border: none;
     background: #ebfffc;
@@ -28,10 +27,6 @@ body{
     width: 60px;
     height: 60px;
     cursor: pointer;
-    position: absolute;
-    top: 35%; 
-    right: 1px; 
-    transform: translateY(-50%); 
 }
 .search button img{
     width: 16px;
@@ -54,7 +49,6 @@ body{
     font-size: 18px;
     color: #555;
     position: relative;
-    right: 15px;
 }
 .weather-icon{
     width: 170px;
@@ -147,14 +141,23 @@ body{
 }
 
 @media(max-width: 600px) {
-    .search button {
-        height: 50px;
-        max-width: 60px;
-        width: auto;
-        padding: 10px;
-        right: 10px;
+    .card {
+        padding: 30px 20px;
     }
+    
     .search input {
-        right: 20px;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    .search button {
+        width: 50px;
+        height: 50px;
+        min-width: 50px; /* لمنع التقلص */
+    }
+    
+    .search button img {
+        width: 14px;
     }
 }
