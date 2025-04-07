@@ -211,7 +211,7 @@ function initMap(lat, lon) {
 }
 
 // إضافة حدث عند النقر على زر البحث
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", async () => {
     const city = searchBox.value.trim();
     
     if (city) {
@@ -220,6 +220,9 @@ searchBtn.addEventListener("click", () => {
         instructions.style.display = "none";
         lottie.style.display = "block";
         autocompleteList.style.display = "none";
+
+        await checkWeather(city);
+        searchBtn.disabled = false;
     } else {
         checkCurrentLocation();
         instructions.style.display = "none";
