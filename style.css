@@ -139,3 +139,11 @@ body{
 .autocomplete-item:hover {
     background-color: #e9e9e9; /* تغيير الخلفية عند المرور */
 }
+
+@media(max-width: 600px) {
+    .search button {
+        height: 50px;
+        width: 100%;
+        padding: 10px;
+    }
+}
